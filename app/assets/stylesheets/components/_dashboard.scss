@@ -1,0 +1,26 @@
+.dashboard-title {
+  font-size: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 50px;
+  margin-bottom: 40px;
+}
+
+.dashboard-title span {
+  box-shadow: inset 0px -12px $red;
+}
+
+.container-dashboard {
+  width: 60%;
+  margin: 0% 20%;
+}
+
+.dashboard-subtitle {
+  font-size: 24px;
+}
+
+.card-container-dashboard {
+  display: flex;
+  flex-wrap: wrap;
+}

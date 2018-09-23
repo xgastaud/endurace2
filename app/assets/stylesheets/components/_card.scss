@@ -1,0 +1,339 @@
+.slider-distance {
+  color: rgb(235, 28, 60);
+  margin: auto !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-selection {
+  color: rgb(235, 28, 60);
+  background-color: rgb(235, 28, 60);
+}
+
+.resultats {
+  font-family: 'Poppins';
+  border: 1px solid rgba(235, 28, 60, 0.8);
+  color: rgba(235, 28, 60, 0.8);
+  background-color: white;
+  margin-left: 0px;
+  margin-right: 16px;
+  border-radius: 2px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+
+
+.datepicker {
+  text-align: left !important;
+  padding-left: 20px;
+}
+
+#ex2 {
+  text-align: center !important;
+}
+
+.slider{
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  color: rgb(235, 28, 60);
+ }
+
+ .filter-form {
+  margin: auto !important;
+  color: rgb(235, 28, 60);
+  text-align: center;
+ }
+
+ .filters {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  padding-right: 25px;
+  }
+
+.index-inputs {
+  margin: 10px;
+  padding: 10px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.index-drop {
+  margin-bottom: 5px;
+  flex: 0 0 auto;
+  width: 190px;
+  color: rgb(235, 28, 60);
+  border-radius: 4px;
+  margin-right: 5px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid rgb(235, 28, 60);
+}
+
+.index-drop.datepicker {
+  text-align: center !important;
+  width: 300px !important;
+}
+
+.well {
+  display: flex;
+  flex-direction: row;
+  width: 98%;
+  flex-wrap: wrap;
+  background-color: white;
+  color: rgb(235, 28, 60);
+  align-items: center;
+  background-color: #F2F4F7;
+}
+
+.plusdefiltre {
+  flex: 0 0 auto;
+  width: 98%;
+  border: 1px solid rgb(195, 65, 59);
+  color: white;
+  background-color: rgb(235, 28, 60);
+  border-radius: 4px;
+  margin-top: 30px;
+  height: 50px;
+  text-align: center;
+  padding: 0px;
+  box-shadow: 1px 2px 2px #d5d6d8;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+
+.collapse {
+  width: 100%;
+}
+
+  .dropdown {
+  padding: 0px 5px;
+  }
+
+ .index-container {
+  display: flex;
+  justify-content: space-around;
+  border-top-style: solid;
+  border-top-color: $red;
+  border-top-width: 1px;
+ }
+
+.left-container {
+  width: calc(60% - 1px);
+  @media(max-width: 768px) {
+    width: 100%;
+  }
+}
+.races {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  color: black;
+  width: 330px;
+  text-decoration: none;
+  text-decoration-line: none;
+  background-color: white;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  box-shadow: 1px 2px 2px #d5d6d8;
+  margin-right: 10px;
+  position: relative;
+  width: calc(33% - 10px);
+  @media(max-width: 1200px) {
+    width: calc(50% - 10px);
+  }
+  @media(max-width: 1050px) {
+    width: calc(100% - 10px);
+  }
+}
+.card-picture {
+  height: 200px;
+  background-size: cover !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px 10px;
+}
+
+.card-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-wishlist {
+  color: $red;
+  background-color: rgba(255,255,255,1);
+  margin: 2px 2px 0px 2px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    color: $red;
+    display: flex;
+  }
+  svg:hover {
+  height: 30px;
+  width: 30px;
+  }
+}
+
+.card-review {
+  color: $red;
+  background-color: rgba(255,255,255,1);
+  margin: 2px 2px 0px 2px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    color: $red;
+    display: flex;
+  }
+  svg:hover {
+  height: 30px;
+  width: 30px;
+  }
+}
+.card-wishlist:hover {
+  background-color: $red
+  ;
+  button {
+    color: white;
+  }
+}
+
+.card-top {
+  line-height: 10px;
+  display: flex;
+  flex-direction: column;
+}
+  .card-sport {
+    color: $red;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .card-date {
+    color: white;
+    font-size: 14px;
+  }
+
+  .card-participants {
+      color: rgba(255,255,255,0.8);
+      font-size: 14px;
+    }
+
+.card-name {
+  color: white;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-location {
+
+}
+
+.card-format {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 0px 3px;
+}
+
+// .card-available_slots {
+//   padding-left: 150px;
+//   padding-top: 10px;
+// }
+
+.card-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+  background-position: left;
+  text-align: center;
+  font-size: 16px;
+}
+
+.card-friends {
+  padding: 15px;
+  text-align: left;
+  color: $red;
+  display: flex;
+}
+.card-avatar {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  margin-left: -10px;
+}
+
+.card-avatar-text {
+  margin-left: 5px;
+  padding-top: 5px;
+}
+
+.card-price {
+  padding-top: 20px;
+  padding-right: 5px;
+  color: #C0413D;
+  text-align: right;
+}
+
+
+.card-user {
+  font-size: 12px;
+}
+
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  background: black;
+  opacity: 0;
+}
+
+.like-button-form {
+  background: transparent;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+.card-btn-top-right {
+  display: flex;
+}

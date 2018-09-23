@@ -1,0 +1,40 @@
+<% content_for(:navbar_class, "navbar-home") %>
+<video autoplay loop class="fillWidth">
+  <source src='<%= asset_path "Keep_Running.mp4"%>' type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+  <!-- <source src="PATH_TO_WEBM" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser. -->
+</video>
+<div class="banner-absolute-container">
+  <div class="banner">
+    <div class="banner-content">
+      <h1>ENDURACE</h1>
+      <h2>
+        <span id="banner-typed-text"></span>
+      </h2>
+        <%= form_tag(races_path, method: :get, class: "home-form") do %>
+
+            <%= select_tag :format, options_for_select(Race::FORMATS_SPORTS.values.flatten), { class: 'select_value drop'} %>
+            <%= text_field_tag :address, nil, class: "drop location", placeholder: "Près de" %>
+
+              <%= text_field_tag :from, nil, placeholder: 'Dates', id: "range_start", class: "datepicker drop" %>
+            <%#= text_field_tag :to, Date.today + 3.months, placeholder: 'Date de fin', id: "range_end", class: "datepicker drop" %>
+
+          <!-- <div class="form-inputs"> -->
+            <%= submit_tag "Go", name: nil, class: 'btn-go-home' %>
+          <!-- </div> -->
+        <% end %>
+
+        <div class="searchbar">
+          <%= form_tag(races_path, method: :get) do %>
+          <%= text_field_tag :pg_search_documents , nil, class: "drop", placeholder: "Search" %>
+          <div class="form-inputs">
+            <%= submit_tag "Go", name: nil, class: 'btn-go' %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+      <!-- <div class="index-searchbar">
+        <%= link_to "See all adds", races_path %>
+      </div> -->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+function whishlist() {
+  const card = document.querySelector("[data-race-id='<%= @race.id%>']");
+  card.outerHTML = "<%= j render 'races/card', race: @race %>";
+}
+
+function removeCard() {
+  const card = document.querySelector("[data-race-id='<%= @race.id%>']");
+  card.remove();
+}
+
+<% if request.referer.include?('dashboard') %>
+  removeCard();
+<% else %>
+  whishlist();
+<% end %>

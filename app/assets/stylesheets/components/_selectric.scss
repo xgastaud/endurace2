@@ -1,0 +1,51 @@
+.selectric {
+  height: 70px !important;
+  width: 350px !important;
+  border-radius: 3px !important;
+  background-color: white !important;
+  // margin-bottom: 20px !important;
+  > .label {
+    height: 100% !important;
+    line-height: 60px !important;
+  }
+  > .button {
+    height: 100% !important;
+  }
+}
+
+.selectric .label {
+    display: flex !important;
+    text-align: center !important;
+    // color: black !important;
+    font-family: 'Cabin' !important;
+    font-weight: regular !important;
+    font-size: 26px !important;
+    color: $red !important;
+    background-color: white !important;
+}
+
+.selectric-scroll li {
+  font-family: 'Cabin' !important;
+  font-weight: regular !important;
+  font-size: 26px !important;
+  color: $red !important;
+  background-color: white !important;
+  text-align: left !important;
+  padding-left: 30px;
+  &.selected.highlighted {
+  font-family: 'Cabin' !important;
+  font-weight: regular !important;
+  font-size: 26px !important;
+  color: $red !important;
+  background-color: white !important;
+  text-align: left !important;
+  }
+}
+
+// li.selected.highlighted {
+//     font-family: 'Cabin' !important;
+//     font-weight: regular !important;
+//     font-size: 26px !important;
+//     color: $red !important;
+//     background-color: white !important;
+// }

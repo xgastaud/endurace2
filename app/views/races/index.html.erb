@@ -1,0 +1,62 @@
+<div class="container-fluid">
+  <div class="searchbar">
+    <%= form_tag(races_path, method: :get) do %>
+    <%= text_field_tag :pg_search_documents , nil, class: "drop", placeholder: "Search" %>
+    <% end %>
+  </div>
+  <div class="index-container">
+
+    <div class="left-container">
+      <div class="card-container">
+        <button class="plusdefiltre btn-default dropdown-toggle" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="true" aria-controls="collapseExample">
+          Plus de filtres
+          <span class="caret"></span>
+        </button>
+        <div class="collapse" id="collapseExample">
+          <div class="well">
+            <div class="filters">
+              <%= form_tag(races_path, method: :get, :class =>'filter-form') do %>
+              <h4>Mon épreuve</h4>
+              <div class="index-inputs">
+                  <%= select_tag :format, options_for_select(Race::FORMATS_SPORTS.values.flatten, @format), {class: 'index-drop'}%>
+                  <%= select_tag :range, options_for_select([["jusqu'à 50km de", "50"], ["jusqu'à 200km de", "200"], ["jusqu'à 1000km de", "1000"]], @range), {class: 'index-drop'} %><%= text_field_tag :address, @address, class: "index-drop", placeholder: @address %>
+              </div>
+              <h4>Mes disponibilités</h4>
+              <div class="index-inputs">
+                <%= text_field_tag :from, @from, id: "range_start", class: "datepicker index-drop" %>
+              </div>
+              <h4>Nombre de participants</h4>
+              <div class="slider-distance">
+                <b>10</b>
+                <input id="ex2" type="text" class="span2" name="distance" value="" data-slider-min="10" data-slider-max="40000" data-slider-step="5" data-slider-value="[1,40000]"/>
+                 <b>40000</b>
+              </div>
+              <div class="index-inputs">
+                <%= submit_tag "Appliquer les filtres", name: nil, class: 'plusdefiltre' %>
+              </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class= "resultats">
+        <p>
+          <%= ( @races.length == 1 || @races.length == 0 ) ? "#{@races.length} résultat : cliquez sur \"Plus de filtres\" pour élargir votre recherche !" : "#{@races.length} résultats" %>
+        </p>
+      </div>
+      <div class="races">
+        <%= render "races", races: @races %>
+      </div>
+      <hr />
+   </div>
+   <div id="map" class="hidden-sm" data-markers="<%= @markers.to_json %>" data-icon-path="<%= asset_path 'flag.png' %>"></div>
+  </div>
+  <div class="pages">
+    <!-- rajoute condition if params de page/ -->
+    <% unless params[:pg_search_documents] %>
+      <%= paginate @races, remote: true%>
+    <% end %>
+    <%= page_entries_info @races if params[:page] %>
+  </div>
+  </div>
+</div>
