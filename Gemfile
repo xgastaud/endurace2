@@ -30,7 +30,7 @@ gem 'omniauth-facebook'
 
 gem 'kaminari'
 gem 'forest_liana'
-gem 'rack-cors', '~> 1.0', '>= 1.0.2'
+gem 'rack-cors', '~> 1.0'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
