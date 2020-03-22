@@ -1,8 +1,8 @@
 Arguments: 
-  /usr/local/Cellar/node/9.8.0/bin/node /usr/local/Cellar/yarn/1.5.1/libexec/bin/yarn.js check --integrity
+  /usr/local/Cellar/node/9.8.0/bin/node /usr/local/Cellar/yarn/1.5.1/libexec/bin/yarn.js upgrade
 
 PATH: 
-  /Users/xgastaud/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/bin:/Users/xgastaud/.rbenv/versions/2.6.3/bin:/usr/local/Cellar/rbenv/1.1.2/libexec:./bin:./node_modules/.bin:/Users/xgastaud/.rbenv/shims:/Users/xgastaud/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin
+  /Users/xgastaud/.rbenv/versions/2.6.3/bin:/usr/local/Cellar/rbenv/1.1.2/libexec:./bin:./node_modules/.bin:/Users/xgastaud/.rbenv/shims:/Users/xgastaud/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:./bin:./node_modules/.bin:/Users/xgastaud/.rbenv/shims:/Users/xgastaud/.rbenv/bin:/usr/local/sbin:/usr/local/sbin
 
 Yarn version: 
   1.5.1
@@ -6331,9 +6331,11 @@ Lockfile:
       yargs-parser "^5.0.0"
 
 Trace: 
-  Error: Found 1 errors.
+  Error: Found incompatible module
       at new MessageError (/usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:186:110)
-      at /usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:59470:13
+      at checkOne (/usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:62444:11)
+      at Object.check (/usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:62463:5)
+      at /usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:22803:73
       at Generator.next (<anonymous>)
       at step (/usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:98:30)
       at /usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:109:13
