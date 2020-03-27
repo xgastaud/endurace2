@@ -2,7 +2,7 @@ Geocoder.configure(
   # Geocoding options
   # timeout: 3,                 # geocoding service timeout (secs)
   # lookup: :google,            # name of geocoding service (symbol)
-  # ip_lookup: :freegeoip,      # name of IP address geocoding service (symbol)
+  # ip_lookup: :ipinfo_io,      # name of IP address geocoding service (symbol) // freegeoip remplaced as deprecated
   # language: :en,              # ISO-639 language code
   # [...]
   units: :km,
