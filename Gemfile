@@ -11,7 +11,7 @@ gem 'redis'
 gem 'pundit'
 gem 'nokogiri'
 gem 'cloudinary'
-gem 'carrierwave', '~> 1.2'
+gem 'carrierwave', '~> 1.3'
 gem 'acts_as_votable', '~> 0.11.1'
 gem 'pg_search'
 
